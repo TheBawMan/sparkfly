@@ -3,7 +3,7 @@ import { RxArrowLeft, RxCross1 } from "react-icons/rx";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { BsCartPlus } from "react-icons/bs";
 import styles from "../../styles/styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromWishlist } from "../../redux/actions/wishlist";
@@ -23,6 +23,7 @@ const Wishlist = ({ setOpenWishlist }) => {
     dispatch(addTocart(newData));
     setOpenWishlist(false);
   }
+  let navigate = useNavigate();
 
 
   return (
@@ -31,6 +32,9 @@ const Wishlist = ({ setOpenWishlist }) => {
         {wishlist && wishlist.length === 0 ? (
           <div className="w-full h-screen flex items-center justify-center">
             <div className="flex w-full justify-end pt-5 pr-5 fixed top-3 right-3">
+     <RxArrowLeft size={25}
+              className="cursor-pointer mr-[260px]"
+              onClick={() => navigate(-1)}/>
               <RxCross1
                 size={25}
                 className="cursor-pointer"
