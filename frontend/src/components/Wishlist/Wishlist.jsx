@@ -23,8 +23,8 @@ const Wishlist = ({ setOpenWishlist }) => {
     dispatch(addTocart(newData));
     setOpenWishlist(false);
   }
-
   let navigate = useNavigate();
+
 
   return (
     <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10">
@@ -32,7 +32,7 @@ const Wishlist = ({ setOpenWishlist }) => {
         {wishlist && wishlist.length === 0 ? (
           <div className="w-full h-screen flex items-center justify-center">
             <div className="flex w-full justify-end pt-5 pr-5 fixed top-3 right-3">
-            <RxArrowLeft size={25}
+     <RxArrowLeft size={25}
               className="cursor-pointer mr-[260px]"
               onClick={() => navigate(-1)}/>
               <RxCross1
