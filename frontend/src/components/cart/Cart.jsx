@@ -3,7 +3,7 @@ import { RxArrowLeft, RxCross1 } from "react-icons/rx";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { HiOutlineMinus, HiPlus } from "react-icons/hi";
 import styles from "../../styles/styles";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { backend_url } from "../../server";
 import { useDispatch, useSelector } from "react-redux";
 import { addTocart, removeFromCart } from "../../redux/actions/cart";
@@ -27,7 +27,6 @@ const Cart = ({ setOpenCart }) => {
   };
 
 
-  let navigate = useNavigate();
 
   return (
     <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10 sm:mr-[2000px]">
@@ -35,9 +34,6 @@ const Cart = ({ setOpenCart }) => {
         {cart && cart.length === 0 ? (
           <div className="w-full h-screen flex items-center justify-center ">
             <div className="flex w-full justify-end pt-5 pr-5 fixed top-3 right-3">
-            <RxArrowLeft size={25}
-              className="cursor-pointer mr-[260px]"
-              onClick={() => navigate(-1)}/>
                <RxCross1 
                 size={25}
                 className="cursor-pointer"
