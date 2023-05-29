@@ -1,6 +1,6 @@
 {
-  "name": "e-shop-tutorial",
-  "version": "1.0.0",
+  "name": "sparkflyBackend",
+  "version": "2.1.0",
   "description": "",
   "main": "server.js",
   "engines": {
@@ -11,7 +11,7 @@
     "start": "node server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false"
   },
-  "author": "shahriar Sajeeb",
+  "author": "Arghadip Shee",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
