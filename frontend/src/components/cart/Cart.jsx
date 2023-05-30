@@ -35,7 +35,7 @@ let navigate = useNavigate();
           <div className="w-full h-screen flex items-center justify-center ">
             <div className="flex w-full justify-end pt-5 pr-5 fixed top-3 right-3">
      <RxArrowLeft size={25}
-              className="cursor-pointer mr-[260px]"
+              className="cursor-pointer mr-[220px]"
               onClick={() => navigate(-1)}/>
                <RxCross1 
                 size={25}
