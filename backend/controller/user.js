@@ -158,7 +158,7 @@ router.get(
 );
 
 // log out user
-router.get(
+router.post(
   "/logout",
   catchAsyncErrors(async (req, res, next) => {
     try {
